@@ -28,6 +28,9 @@ set noshowmode
 set noruler
 set laststatus=0
 set noshowcmd
+set tabstop=2
+set shiftwidth=2
+set expandtab
 
 " Some basics:
 	nnoremap c "_c
