@@ -25,6 +25,7 @@ set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
 set cleaner '~/.config/lf/cleaner'
 set previewer '~/.config/lf/scope'
 set autoquit on
+set hidden on
 
 # cmds/functions
 cmd open ${{
@@ -99,6 +100,11 @@ cmd copyto ${{
 
 cmd setbg "$1"
 cmd bulkrename $vidir
+
+cmd rotright $magick $fx -rotate 90 $fx
+cmd rotleft $magick $fx -rotate "-90" $fx
+cmd flipv $magick $fx -flop $fx
+cmd fliph $magick $fx -flip $fx
 
 # Bindings
 map <c-f> $lf -remote "send $id select \"$(fzf)\""
