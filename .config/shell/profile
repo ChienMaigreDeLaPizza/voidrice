@@ -7,6 +7,9 @@
 
 # Adds `~/.local/bin` to $PATH
 export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
+export PATH="$PATH:$HOME/.npm-global/bin"
+
+export NPM_CONFIG_PREFIX="$HOME/.npm-global"
 
 unsetopt PROMPT_SP
 
